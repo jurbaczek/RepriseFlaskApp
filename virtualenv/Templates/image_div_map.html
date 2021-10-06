@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- {{image}} -->
+<img src="https://user-images.githubusercontent.com/35736972/133325015-8762bbe4-fe2a-4f59-bd1f-9ba0520faecf.PNG">
+
+{% for key,value in divs.items() %}
+<div id={{key}}>
+    <!-- <p color="000000">Hello</p> -->
+</div>
+
+<script>
+    var d = document.getElementById('{{key}}');
+    d.style.position = "absolute";
+    d.style.left = "{{value[0]}}px";
+    d.style.top = "{{value[1]}}px";
+    d.style.width = "{{value[2]-value[0]}}px";
+    d.style.height = "{{value[3]-value[1]}}px";
+</script>
+{% endfor %}
+
+</body>
+</html>
